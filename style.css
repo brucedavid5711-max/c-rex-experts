@@ -1,0 +1,490 @@
+*      {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+        body {
+        background:
+        linear-gradient(rgba(13,13,13,0.94), rgba(13,13,13,0.94)),
+        url("assets/crex-logo.jpg") center center / 600px no-repeat fixed;
+        color: white;
+        line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        header h1 {
+            color: #00ffae;
+        }
+
+        /* MAKE HEADER LOGO / BRAND BIGGER */
+header .logo,
+header .brand,
+header h1 {
+    font-size: 2.4rem;      /* increase size */
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+/* Optional: slightly larger on desktop */
+@media (min-width: 768px) {
+    header .logo,
+    header .brand,
+    header h1 {
+        font-size: 2.8rem;
+    }
+}
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #00ffae;
+        }
+
+        .hero {
+            padding: 100px 10%;
+            text-align: center;
+            background: linear-gradient(135deg, #0d0d0d, #141414);
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: #00ffae;
+            color: black;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 80px 10%;
+        }
+
+        .section h3 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #00ffae;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #111;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffae;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 50px 10%;
+            background: #111;
+        }
+
+        .stats div h4 {
+            font-size: 30px;
+            color: #00ffae;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #111;
+            border: 1px solid #333;
+            color: white;
+        }
+
+        .contact button {
+            background: #00ffae;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            border-top: 1px solid #222;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 26px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    background: linear-gradient(135deg, #00ffae, #00cfff);
+    box-shadow: 0 0 15px rgba(0, 255, 174, 0.4);
+    transition: all 0.3s ease;
+}
+
+.social-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: black;
+}
+
+.social-btn:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 174, 0.8),
+        0 0 40px rgba(0, 255, 174, 0.5);
+}
+
+.social-btn.x {
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+}
+
+.social-btn.x svg {
+    fill: black;
+}
+
+.contact-subtext {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background: linear-gradient(145deg, #0f0f0f, #151515);
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0,255,174,0.15), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.team-card:hover::before {
+    opacity: 1;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: #00ffae;
+    box-shadow: 0 0 25px rgba(0,255,174,0.4);
+}
+
+.team-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00ffae, #00cfff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 34px;
+    font-weight: bold;
+    color: black;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.team-role {
+    font-size: 14px;
+    color: #00ffae;
+    margin-bottom: 12px;
+}
+
+.team-desc {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.about {
+    background: linear-gradient(135deg, #0d0d0d, #141414);
+    text-align: center;
+}
+
+.about p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-size: 17px;
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.about-highlight {
+    color: #00ffae;
+    font-weight: bold;
+}
+
+
+/* HEADER LOGO */
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-wrap img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0,255,174,0.7);
+}
+
+.site-header h1 {
+    color: #00ffae;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* BACKGROUND LOGO (WATERMARK STYLE) */
+header {
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero {
+    background: transparent;
+}
+
+.section {
+    background: transparent;
+}
+
+.about {
+    background: transparent;
+}
+
+/* FULL SITE GREEN BACKGROUND */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #008000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* REMOVE SECTION OVERRIDES */
+header,
+.hero,
+.section,
+.about {
+    background: transparent;
+}
+
+/* NEON DIVIDER AFTER SECTIONS */
+#about,
+#offer,
+#proof,
+#team {
+    position: relative;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+}
+
+/* GLOWING LINE */
+#about::after,
+#offer::after,
+#proof::after,
+#team::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00ffae,
+        #ffffff,
+        #00ffae,
+        transparent
+    );
+    box-shadow:
+        0 0 10px rgba(0, 255, 174, 0.8),
+        0 0 25px rgba(0, 255, 174, 0.6);
+    animation: pulseLine 3s infinite ease-in-out;
+}
+
+/* ANIMATION */
+@keyframes pulseLine {
+    0% {
+        opacity: 0.4;
+        width: 60%;
+    }
+    50% {
+        opacity: 1;
+        width: 75%;
+    }
+    100% {
+        opacity: 0.4;
+        width: 60%;
+    }
+}
+
+/* TEAM SOCIAL BUTTONS */
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.team-socials a {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background: #00ffae;
+    transition: all 0.3s ease;
+}
+
+.team-socials a.x {
+    background: #ffffff;
+}
+
+.team-socials a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(0, 255, 174, 0.8);
+}
+
+/* ENSURE TEAM CARDS DON'T BLOCK CLICKS */
+.team-card {
+    position: relative;
+}
+
+/* SOCIAL BUTTONS — CLICKABLE FIX */
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+    position: relative;
+    z-index: 10; /* 👈 THIS FIXES IT */
+}
+
+.team-socials a {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #00ffae;
+    color: #000;
+    cursor: pointer;
+    pointer-events: auto; /* 👈 FORCE CLICKS */
+    transition: all 0.25s ease;
+}
+
+.team-socials a.x {
+    background: #ffffff;
+    color: #000;
+}
+
+.team-socials a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(0, 255, 174, 0.8);
+}
+
+.team-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00ffcc; /* optional glow color */
+}
+
